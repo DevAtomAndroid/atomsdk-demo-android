@@ -73,7 +73,7 @@ Remove the callback using
 AtomManager.removeVPNStateListener(VPNStateListener this);
 ```
 
-### Listening to IKEV Event
+### Listening to IKEV Callbacks
 
 While connecting to IKEV protocol callbacks must be registered using bind service
 
@@ -116,9 +116,9 @@ Callbacks will be registered for the ease of the developer.
     }
 ```
 
-## Packet Transmitted Event
+## Packet Transmitted Callback
 
-ATOM SDK offers an additional event onPacketTransmitted only trigger while connected using TCP or UDP to read in/out packet transmitted.
+ATOM SDK offers an additional callback onPacketTransmitted only trigger while connected using TCP or UDP to read in/out packet transmitted.
  
 ``` 
     @Override
@@ -196,7 +196,7 @@ atomManager.getProtocols(new CollectionCallback<Protocol>() {
 
 ## How to Connect
 
-As soon as you call Connect method, the events you were listening to will get the updates about the states being changed and Dial Error (if any occurs) as well.
+As soon as you call Connect method, the callbacks you were listening to will get the updates about the states being changed and Dial Error (if any occurs) as well.
 
 After initializing the VPNProperties, just call Connect method of ATOM SDK.
  
